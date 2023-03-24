@@ -1,15 +1,23 @@
 package com.basicCorePrograms;
+
+import java.util.Scanner;
+
 public class LargestAmongThreeNumbers {
     void largest(){
-        int Array[] = {1, 2, 3, -3, -6, -5,};
-        for (int i = 0; i < Array.length; i++) {
-            for (int j = i + 1; j < Array.length; j++) {
-                for (int k = j + 1; k < Array.length; k++) {
-                    if (Array[i] + Array[j] + Array[k] == 0) {
-                        System.out.println("Numbers found : " + Array[i] + "," + Array[j] + " and " + Array[k]);
-                    }
-                }
-            }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a First Number: ");
+        int number1 = scanner.nextInt();
+        System.out.println("Enter a Second Number: ");
+        int number2 = scanner.nextInt();
+        System.out.println("Enter a Third Number: ");
+        int number3 = scanner.nextInt();
+        if(number1 > number2 && number1 > number3){
+            System.out.println(number1);
+        } else if ( number2 > number1 && number2 > number3) {
+            System.out.println(number2);
+
+        }else{
+            System.out.println(number3);
         }
     }
     public static void main(String[] args) {
